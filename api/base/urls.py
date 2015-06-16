@@ -2,12 +2,12 @@ from django.conf import settings
 from django.conf.urls import include, url, patterns
 # from django.contrib import admin
 from django.conf.urls.static import static
-from settings import API_BASE
+from settings import API_PREFIX
 
 
 from . import views
 
-base_pattern = '^{}'.format(API_BASE)
+base_pattern = '^{}'.format(API_PREFIX)
 
 urlpatterns = [
     ### API ###
