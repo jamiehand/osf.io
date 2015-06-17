@@ -13,7 +13,7 @@ urlpatterns = [
     ### API ###
     url(base_pattern,
         include(patterns('',
-                         url(r'^$', views.root),
+                         url(r'^$', views.root),  # TODO I think this is becoming '//v2' but should be '/v2'
                          url(r'^nodes/', include('api.nodes.urls', namespace='nodes')),
                          url(r'^users/', include('api.users.urls', namespace='users')),
                          url(r'^docs/', include('rest_framework_swagger.urls')),
